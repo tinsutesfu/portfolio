@@ -301,7 +301,7 @@ const App = () => {
                       />
                       <img 
                         src={project.image[0]} 
-                        className="absolute top-4 right-4 w-1/4 h-1/3 object-cover transform transition-transform duration-300 group-hover:scale-105 rounded-lg"
+                        className="absolute top-4 right-4 w-1/4 h-25 object-cover transform transition-transform duration-300 group-hover:scale-105 rounded-lg"
                         alt={project.title}
                       />
                     </div>
@@ -378,7 +378,7 @@ const App = () => {
                         />
                         <img 
                           src={selectedProject.image[0]} 
-                          className="absolute top-4 right-4 w-1/3 h-1/3 object-cover transform transition-transform duration-300 group-hover:scale-105 rounded-lg"
+                          className="absolute top-4 right-4 w-1/4 h-25 object-cover transform transition-transform duration-300 group-hover:scale-105 rounded-lg"
                           alt={selectedProject.title}
                         />
                       </div>
