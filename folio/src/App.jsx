@@ -42,7 +42,7 @@ const App = () => {
     { name: 'Faccebook', url: 'https://facebook.com/tinsayetesfaye', icon: FaFacebook },
     { name: 'Telegram', url: 'https://t.me/y@tinsi', icon: FaTelegram },
     { name: 'Whatsapp', url: 'https://whatsapp.com', icon: FaWhatsapp },
-    { name: 'Website', url: 'https://your-portfolio.com', icon: GlobeAltIcon },
+    { name: 'Website', url: 'https://nodjs-1-3k0d.onrender.com', icon: GlobeAltIcon },
   ];
 
   // Sample data
@@ -58,7 +58,7 @@ const App = () => {
     },
     {
       id: 2,
-      title: "tinsu lapto ",
+      title: "tinsu laptop ",
       description: "I built a web-based online ecommerce platform that Designed and developed a responsive and user-friendly e-commerce platform using MERN stack technologies (MongoDB, Express.js, React.js, Node.js), enabling customers to browse, filter, and purchase laptops online,Integrated secure payment gateways, including Chapa (Ethiopia-based payment solution) and PayPal, ensuring seamless and secure financial transactions. technology that i used are listed below.",
       liveLink: "https://nodjs-1-3k0d.onrender.com", // Replace with your Render link
       tech: ["React", "contextApi", "nodejs","express","mongodb","materialUi","chapa","vite","paypal","jwt"],
@@ -130,26 +130,52 @@ const App = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-gray-800/80 backdrop-blur-md z-40">
         <div className="container mx-auto px-4 md:px-8  flex justify-between items-center">
-        <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
-      className="w-16 h-16 md:w-20 md:h-20 relative"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full blur-2xl opacity-30 animate-pulse" />
-      <HashLink
-                smooth
-                to={`#home`}
-                className="text-gray-300 hover:text-indigo-400 transition-colors font-medium"
-              >
-                <img
-        src={tzon}
-        className="w-full h-full rounded-full object-cover border-8 border-gray-800 shadow-2xl relative z-10"
-        alt="Tinsaye - MERN Stack Developer"
-      />
-              </HashLink>
-      
-    </motion.div>
+        {/* Navigation Logo */}
+<motion.div 
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+  className="w-16 h-16 md:w-20 md:h-20 relative"
+>
+  {/* Animated glow background */}
+  <motion.div
+    initial={{ opacity: 0.3, scale: 1 }}
+    whileHover={{
+      opacity: 0.5,
+      scale: 1.1,
+      rotate: 180,
+      transition: { duration: 0.8 }
+    }}
+    className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full blur-md"
+  />
+  
+  {/* Main logo with multiple hover effects */}
+  <HashLink smooth to={`#home`}>
+    <motion.img
+      src={tzon}
+      initial={{ scale: 1 }}
+      whileHover={{
+        rotate: 360,
+        scale: 1.1,
+        boxShadow: "0 0 20px rgba(99, 102, 241, 0.7)",
+        transition: {
+          rotate: { 
+            duration: 0.8, 
+            ease: "easeInOut",
+            repeat: 0 
+          },
+          scale: { 
+            duration: 0.3,
+            type: "spring",
+            stiffness: 300
+          }
+        }
+      }}
+      className="w-full h-full rounded-full object-cover border-[3px] md:border-[5px] border-gray-800 shadow-lg relative z-10 cursor-pointer"
+      alt="Tinsu Logo"
+    />
+  </HashLink>
+</motion.div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -266,19 +292,87 @@ const App = () => {
     </motion.div>
 
     {/* Profile Image */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
-      className="w-64 h-64 md:w-96 md:h-96 relative"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full blur-2xl opacity-30 animate-pulse" />
-      <img
-        src={tinsu}
-        className="w-full h-full rounded-full object-cover border-8 border-gray-800 shadow-2xl relative z-10"
-        alt="Tinsaye - MERN Stack Developer"
-      />
-    </motion.div>
+    {/* Hero Profile Image Container */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="w-64 h-64 md:w-96 md:h-96 relative group"
+>
+  {/* Dynamic gradient background */}
+  <motion.div
+    initial={{ opacity: 0.3, scale: 1 }}
+    animate={{
+      opacity: [0.3, 0.4, 0.3],
+      scale: [1, 1.03, 1],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 rounded-full blur-xl"
+  />
+
+  {/* Main image with complex hover animation */}
+  <motion.img
+    src={tinsu}
+    initial={{ 
+      scale: 1,
+      rotate: 0,
+      y: 0,
+      boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"
+    }}
+    whileHover={{
+      scale: 1.05,
+      y: -15,
+      rotate: [0, 5, -5, 5, -5, 0], // Gentle sway
+      boxShadow: "0 15px 50px rgba(99, 102, 241, 0.4)",
+      transition: {
+        scale: {
+          duration: 0.5,
+          type: "spring",
+          stiffness: 300,
+          damping: 10
+        },
+        y: {
+          duration: 0.5,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut"
+        },
+        rotate: {
+          duration: 2,
+          ease: "easeInOut"
+        },
+        boxShadow: {
+          duration: 0.3
+        }
+      }
+    }}
+    className="w-full h-full rounded-full object-cover border-[6px] md:border-[8px] border-gray-800 shadow-xl relative z-10 cursor-pointer"
+    alt="Tinsaye - MERN Stack Developer"
+  />
+
+  {/* Hover pulse ring effect */}
+  <motion.div
+    initial={{ 
+      scale: 0.9,
+      opacity: 0,
+      borderWidth: 2
+    }}
+    whileHover={{
+      scale: 1.15,
+      opacity: [0, 0.4, 0],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeOut"
+      }
+    }}
+    className="absolute inset-0 border border-indigo-400 rounded-full z-0"
+  />
+</motion.div>
   </div>
 </section>
 
