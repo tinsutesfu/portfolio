@@ -2,7 +2,8 @@ import { useState, useEffect,useRef } from 'react';
 import tinsu from './assets/tinsu.jpg';
 import dblog from './assets/dblog.png';
 import mblog from './assets/mblog.png';
-import laptop from './assets/laptop.jpg';
+import ecode from './assets/eco-de.png';
+import ecomo from './assets/eco-mo.png';
 import tzon from './assets/t-zon.jpg';
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
@@ -48,12 +49,20 @@ const App = () => {
   const projects = [
   
     {
-      id: 2,
+      id: 1,
       title: "tinsu blog App",
       description: "On this blog, you'll find daily articles and news on topics such as web development, ai and programming languages.tinsaye is always learning and exploring new technologies. so in this blog app user can read any posts but only registered user give like and comments for each posts. technology that i used are listed below.",
       liveLink: "https://your-task-app.onrender.com", // Replace with your Render link
       tech: ["React", "Firebase", "nodejs","express","mongodb","flowbite","tailwindcss","vite","Rtk","Cloudinary"],
       image: [mblog, dblog]
+    },
+    {
+      id: 2,
+      title: "tinsu lapto ",
+      description: "I built a web-based online ecommerce platform that Designed and developed a responsive and user-friendly e-commerce platform using MERN stack technologies (MongoDB, Express.js, React.js, Node.js), enabling customers to browse, filter, and purchase laptops online,Integrated secure payment gateways, including Chapa (Ethiopia-based payment solution) and PayPal, ensuring seamless and secure financial transactions. technology that i used are listed below.",
+      liveLink: "https://nodjs-1-3k0d.onrender.com", // Replace with your Render link
+      tech: ["React", "contextApi", "nodejs","express","mongodb","materialUi","chapa","vite","paypal","jwt"],
+      image: [ecomo, ecode]
     },
     
 
