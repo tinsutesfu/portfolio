@@ -45,7 +45,7 @@ const App = () => {
       id: 1,
       title: "tinsu blog App",
       description: "On this blog, you'll find daily articles and news on topics such as web development, ai and programming languages.tinsaye is always learning and exploring new technologies. so in this blog app user can read any posts but only registered user give like and comments for each posts. technology that i used are listed below.",
-      liveLink: "https://your-task-app.onrender.com",
+      liveLink: "https://mern-blog-xzlk.onrender.com"
       tech: ["React", "Firebase", "nodejs", "express", "mongodb", "flowbite", "tailwindcss", "vite", "Rtk", "Cloudinary"],
       image: [mblog, dblog]
     },
