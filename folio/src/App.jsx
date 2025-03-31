@@ -45,8 +45,8 @@ const App = () => {
       id: 1,
       title: "tinsu blog App",
       description: "On this blog, you'll find daily articles and news on topics such as web development, ai and programming languages.tinsaye is always learning and exploring new technologies. so in this blog app user can read any posts but only registered user give like and comments for each posts. technology that i used are listed below.",
-      liveLink: "https://your-task-app.onrender.com",
-      tech: ["React", "Firebase", "nodejs", "express", "mongodb", "flowbite", "tailwindcss", "vite", "Rtk", "Cloudinary"],
+      liveLink: "https://your-task-app.onrender.com", // Replace with your Render link
+      tech: ["React", "Firebase", "nodejs","express","mongodb","flowbite","tailwindcss","vite","Rtk","Cloudinary"],
       image: [mblog, dblog]
     },
     {
@@ -607,22 +607,22 @@ const App = () => {
                 </ul>
               </motion.p>
 
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-              >
-                <button
-                  onClick={() => window.open('https://drive.google.com/file/d/1nI6E5Mjebw731sOWZLkj-TmqbA4zfFQw/view?usp=drive_link', '_blank')}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg font-medium flex items-center gap-2 transition-all text-sm sm:text-base"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  View My Resume
-                </button>
-              </motion.div>
-            </div>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+        >
+          <button
+            onClick={() => window.open('YOUR_GOOGLE_DRIVE_CV_LINK', '_blank')}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 transition-all"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            View My Resume
+          </button>
+        </motion.div>
+      </div>
 
             {/* Experience Timeline */}
             <motion.div
