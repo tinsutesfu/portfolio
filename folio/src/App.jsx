@@ -613,7 +613,7 @@ const App = () => {
           viewport={{ once: true }}
         >
           <button
-            onClick={() => window.open('YOUR_GOOGLE_DRIVE_CV_LINK', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1nI6E5Mjebw731sOWZLkj-TmqbA4zfFQw/view?usp=drive_link', '_blank')}
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 transition-all"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
